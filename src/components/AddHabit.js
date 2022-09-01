@@ -21,7 +21,6 @@ export function AddHabit() {
 
   const [title, setTitle] = useState("");
   const handleSubmit = (e) => {
-    notify();
     e.preventDefault();
 
     if (title) {
@@ -66,6 +65,7 @@ export function AddHabit() {
         ],
       };
       dispatch(addHabit(habit));
+      notify();
       const goToHome = setTimeout(() => navigate("/habit-tracker-app"), 600);
     }
   };
@@ -89,6 +89,7 @@ export function AddHabit() {
         <div>
           <div>
             <TextField
+              required
               sx={{
                 marginTop: "70px",
               }}

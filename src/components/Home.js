@@ -2,13 +2,12 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 import Button from "@mui/material/Button";
-
+import { Link } from "react-router-dom";
 import { Habits } from "./Habits";
 import { useSelector } from "react-redux";
 export function Home() {
   const habits = useSelector((state) => state.habits);
-  console.log(habits.length);
-  console.log(habits);
+
   return (
     <div>
       {habits.length === 0 ? (
@@ -23,14 +22,15 @@ export function Home() {
             !! - Jim Ryun
           </Typography>
           <div>
-            <Button
-              sx={{ margin: 1, textDecoration: "none" }}
-              variant="contained"
-              color="inherit"
-              href="/addHabit"
-            >
-              Get Started
-            </Button>
+            <Link to="/addHabit" style={{ textDecoration: "none" }}>
+              <Button
+                sx={{ margin: 1, color: "#0f172a" }}
+                variant="contained"
+                color="inherit"
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
         </Box>
       ) : null}
