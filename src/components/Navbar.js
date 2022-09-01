@@ -20,7 +20,7 @@ export default function Navbar() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <Link to="/">
+            <Link to="/habit-tracker-app">
               <HomeIcon fontSize="large" sx={{ color: "white" }} />
             </Link>
           </IconButton>

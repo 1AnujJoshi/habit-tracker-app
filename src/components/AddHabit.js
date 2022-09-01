@@ -66,7 +66,7 @@ export function AddHabit() {
         ],
       };
       dispatch(addHabit(habit));
-      const goToHome = setTimeout(() => navigate("/"), 600);
+      const goToHome = setTimeout(() => navigate("/habit-tracker-app"), 600);
     }
   };
   return (
