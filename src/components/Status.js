@@ -34,7 +34,9 @@ export function Status({ item, day, title, id }) {
         height: "12%",
         margin: "10px",
         borderRadius: "10px",
+        cursor: "pointer",
       }}
+      onClick={() => changeStatus()}
     >
       <div>
         <Typography variant="h4">{day}</Typography>
@@ -45,7 +47,6 @@ export function Status({ item, day, title, id }) {
               width: "100%",
               backgroundColor: "cream",
             }}
-            onClick={() => changeStatus()}
           >
             {status === DONE ? (
               <DoneIcon color="success" sx={{ fontSize: "80px" }} />
