@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/habit-tracker-app" element={<Home />} />
         <Route exact path="/addHabit" element={<AddHabit />} />
       </Routes>
     </Router>
